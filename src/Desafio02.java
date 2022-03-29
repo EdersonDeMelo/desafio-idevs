@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Desafio02 {
 
@@ -13,8 +14,7 @@ public class Desafio02 {
         return listaDeDivisores;
     }
 
-    public void quantidadeDeDivisores() {
-        int numeros = 15;
+    public void quantidadeDeDivisores(int numeros) {
         List<Integer> valor;
         List<Integer> valorMaisUm;
 
@@ -23,7 +23,7 @@ public class Desafio02 {
             valorMaisUm = divisores(i + 1);
 
             if (valor.size() == valorMaisUm.size()) {
-                System.out.println(i);
+                System.out.println("O numero " + i + " e o numero posterior a ele possuem a mesma quantidade de divisores.");
             }
         }
     }
@@ -32,6 +32,11 @@ public class Desafio02 {
 class MainDesafio02 {
     public static void main(String[] args) {
         Desafio02 desafio02 = new Desafio02();
-        desafio02.quantidadeDeDivisores();
+        Scanner entrada = new Scanner(System.in);
+
+        System.out.println("Informe o numero desejado: ");
+        int numeroInformado = entrada.nextInt();
+        desafio02.quantidadeDeDivisores(numeroInformado);
+
     }
 }

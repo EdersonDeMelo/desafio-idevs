@@ -23,7 +23,6 @@ public class Desafio01 {
             } else {
                 soma += 1;
             }
-
         }
         return soma;
     }
