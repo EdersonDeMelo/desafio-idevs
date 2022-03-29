@@ -1,20 +1,30 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Desafio02 {
 
-    public void divisores(int num) {
-        for (int i = 1; i <= num; i++) {
-            System.out.print(i + ">>>>>>>");
-            for (int j = i; j > 0; j--) {
-                if (i % j == 0) {
-                    System.out.print(j + ", ");
-                }
+    private List<Integer> divisores(int num) {
+        List<Integer> listaDeDivisores = new ArrayList<>();
+        for (int j = num; j > 0; j--) {
+            if (num % j == 0) {
+                listaDeDivisores.add(num);
             }
-            System.out.println();
         }
+        return listaDeDivisores;
     }
-    public void quantidadeDeDivisores(){
-        int numeros = 15;
-        for (int i = 0; i < numeros; i++) {
 
+    public void quantidadeDeDivisores() {
+        int numeros = 15;
+        List<Integer> valor;
+        List<Integer> valorMaisUm;
+
+        for (int i = 1; numeros > i; i++) {
+            valor = divisores(i);
+            valorMaisUm = divisores(i + 1);
+
+            if (valor.size() == valorMaisUm.size()) {
+                System.out.println(i);
+            }
         }
     }
 }
@@ -22,6 +32,6 @@ public class Desafio02 {
 class MainDesafio02 {
     public static void main(String[] args) {
         Desafio02 desafio02 = new Desafio02();
-        desafio02.divisores(1);
+        desafio02.quantidadeDeDivisores();
     }
 }
