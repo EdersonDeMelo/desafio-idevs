@@ -20,6 +20,9 @@ public class Desafio03 {
         return listaDePrimos;
     }
 
+    /**
+     *
+     */
     public void somaDosPrimos() {
         List<Integer> lista = numerosPrimos();
         int soma = 0;

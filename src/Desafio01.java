@@ -2,6 +2,11 @@ import java.util.Scanner;
 
 public class Desafio01 {
 
+    /**
+     * Metodo responsavel por fazer a soma do valores definidos dos caracteres.
+     * @param palavra Recebe uma String como parametro.
+     * @return Retorna a soma dos valores do caracteres.
+     */
     public int somaDeCaracter(String palavra) {
         int soma = 0;
         for (int i = 0; i < palavra.length(); i++) {

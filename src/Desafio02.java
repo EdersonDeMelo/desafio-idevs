@@ -3,7 +3,11 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Desafio02 {
-
+    /**
+     * Metodo responsavel por gerar lista com divisores
+     * @param num recebe numero inteiro
+     * @return retorna uma lista com os divisores
+     */
     private List<Integer> divisores(int num) {
         List<Integer> listaDeDivisores = new ArrayList<>();
         for (int j = num; j > 0; j--) {
