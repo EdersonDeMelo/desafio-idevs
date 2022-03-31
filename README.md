@@ -1,7 +1,7 @@
 # Desafio-IDevS
 
 <h2>Tecnologias utilizadas</h2>
-  <h3><li>Java EE 11</h3> 
+  <h3><li>Java SE 11</h3> 
   <h3><li>IntelliJ IDEA</h3> 
   
 <h2>Como Rodar</h2>
