@@ -60,7 +60,7 @@ public class Desafio03 {
 
         }
 
-        System.out.println("Soma " + novaSoma + " quantidade de  numeros primos " + quantidadeDeNumeros);
+        System.out.println("O maior numero primo é o " + novaSoma + " e a quantidade de numeros primos consecutivos é de " + quantidadeDeNumeros);
     }
 }
 
