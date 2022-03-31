@@ -1,11 +1,12 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Desafio03 {
 
-    private List<Integer> numerosPrimos() {
+    private List<Integer> numerosPrimos(int num) {
         List<Integer> listaDePrimos = new ArrayList<>();
-        for (int i = 2; i <= 500; i++) {
+        for (int i = 2; i <= num; i++) {
             boolean primo = true;
             for (int j = 2; j < i; j++) {
                 if (i % j == 0) {
@@ -21,10 +22,11 @@ public class Desafio03 {
     }
 
     /**
-     *
+     * 
+     * @param num
      */
-    public void somaDosPrimos() {
-        List<Integer> lista = numerosPrimos();
+    public void somaDosPrimos(int num) {
+        List<Integer> lista = numerosPrimos(num);
         int soma = 0;
         int novaSoma = 0;
         int quantidadeDeNumeros = 0;
@@ -33,18 +35,18 @@ public class Desafio03 {
         for (int i = 0; i < lista.size(); i++) {
             soma += lista.get(i);
 
-            for (Integer lista2 : lista) {
-                if (soma == lista2) {
+            for (Integer valorNaPosicao : lista) {
+                if (soma == valorNaPosicao) {
                     novaSoma = soma;
                     break;
                 }
             }
 
         }
-        for (int j = 0; j < lista.size(); j++) {
-            if (sequenciaDePrimos !=novaSoma){
-                System.out.print(lista.get(j)+", ");
-                sequenciaDePrimos+= lista.get(j);
+        for (Integer valorNaPosicaoDaLista : lista) {
+            if (sequenciaDePrimos != novaSoma) {
+                System.out.print(valorNaPosicaoDaLista + ", ");
+                sequenciaDePrimos += valorNaPosicaoDaLista;
                 quantidadeDeNumeros++;
 
             }
@@ -58,6 +60,10 @@ public class Desafio03 {
 class MainDesafio03 {
     public static void main(String[] args) {
         Desafio03 desafio03 = new Desafio03();
-        desafio03.somaDosPrimos();
+        Scanner entrada = new Scanner(System.in);
+
+        System.out.println("Informe o numero desejado: ");
+        int numeroInformado = entrada.nextInt();
+        desafio03.somaDosPrimos(numeroInformado);
     }
 }

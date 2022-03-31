@@ -3,10 +3,12 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Desafio02 {
+
     /**
-     * Metodo responsavel por gerar lista com divisores
-     * @param num recebe numero inteiro
-     * @return retorna uma lista com os divisores
+     * Metodo responsavel por fazer a divisão de um inteiro, verificando a
+     * quantidade de divisores resultantes a 0.
+     * @param num Recebe um inteiro como parametro.
+     * @return Retorna uma lista com a quantidade de divisores.
      */
     private List<Integer> divisores(int num) {
         List<Integer> listaDeDivisores = new ArrayList<>();
@@ -18,16 +20,22 @@ public class Desafio02 {
         return listaDeDivisores;
     }
 
-    public void quantidadeDeDivisores(int numeros) {
+    /**
+     * Metodo responsavel por verificar se o numero e seu numero posterior contem a mesma
+     * quantidade de divisores.
+     * @param numero Recebe um valor do tipo Inteiro.
+     */
+    public void quantidadeDeDivisores(int numero) {
         List<Integer> valor;
         List<Integer> valorMaisUm;
 
-        for (int i = 1; numeros > i; i++) {
+        for (int i = 1; numero > i; i++) {
             valor = divisores(i);
             valorMaisUm = divisores(i + 1);
 
             if (valor.size() == valorMaisUm.size()) {
-                System.out.println("O numero " + i + " e o numero posterior a ele possuem a mesma quantidade de divisores.");
+                System.out.println("O numero " + i + " e o numero posterior a ele " +
+                        "possuem a mesma quantidade de divisores.");
             }
         }
     }
