@@ -4,6 +4,11 @@ import java.util.Scanner;
 
 public class Desafio03 {
 
+    /**
+     * Metodo responsavel por verificar quais são os numeros primos dentro de um numero inteiro escolhido.
+     * @param num Recebe um inteiro como parametro.
+     * @return Retorna uma lista com os numeros primos gerados.
+     */
     private List<Integer> numerosPrimos(int num) {
         List<Integer> listaDePrimos = new ArrayList<>();
         for (int i = 2; i <= num; i++) {
@@ -22,8 +27,10 @@ public class Desafio03 {
     }
 
     /**
-     * 
-     * @param num
+     * Metodo responsavel por fazer a soma dos numeros primos gerados, verificar se a soma gera o numero primo
+     * maior dentro do numero escolhido, e exibir a sequencia de numeros primos, o numero primo gerado
+     * e quantidade de primos utilizado.
+     * @param num Recebe um inteiro como parametro.
      */
     public void somaDosPrimos(int num) {
         List<Integer> lista = numerosPrimos(num);
@@ -43,10 +50,10 @@ public class Desafio03 {
             }
 
         }
-        for (Integer valorNaPosicaoDaLista : lista) {
+        for (Integer valorNaPosicaoNaLista : lista) {
             if (sequenciaDePrimos != novaSoma) {
-                System.out.print(valorNaPosicaoDaLista + ", ");
-                sequenciaDePrimos += valorNaPosicaoDaLista;
+                System.out.print(valorNaPosicaoNaLista + ", ");
+                sequenciaDePrimos += valorNaPosicaoNaLista;
                 quantidadeDeNumeros++;
 
             }
